@@ -13,5 +13,16 @@ public class FindTheSecondLargestValueInTheList {
                 .toList()
                 .get(numbers.size()-2)
         );
+
+        Optional<Integer> secondLargestValue = numbers.stream()
+                .distinct()
+                .sorted((n1, n2) -> n2 - n1)
+                .skip(1)
+                .findFirst();
+
+        secondLargestValue.ifPresentOrElse(
+                num -> System.out.println("O segundo maior número é: " + num),
+                () -> System.out.println("A lista não contém um segundo maior número.")
+        );
     }
 }
