@@ -2,7 +2,11 @@ package streams;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+
+/** Challenge 4:
+ *  Remova todos os valores ímpares:
+ *  Utilize a Stream API para remover os valores ímpares da lista e imprima a lista resultante no console.
+ */
 
 public class RemoveAllOddNumbersInTheList {
     public static void main(String[] args) {
@@ -11,6 +15,6 @@ public class RemoveAllOddNumbersInTheList {
         List<Integer> evenNumbers = numbers.stream()
                 .filter(n -> n % 2 == 0)
                 .toList();
-        evenNumbers.forEach(System.out::println);
+        System.out.println("Only even numbers: " + evenNumbers);
     }
 }

@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+/** Challenge 7:
+ *  Encontrar o segundo número maior da lista:
+ *  Com a ajuda da Stream API, encontre o segundo número maior da lista e exiba o resultado no console.
+ */
+
 public class FindTheSecondLargestValueInTheList {
 
     public static void main(String[] args) {
@@ -21,8 +26,8 @@ public class FindTheSecondLargestValueInTheList {
                 .findFirst();
 
         secondLargestValue.ifPresentOrElse(
-                num -> System.out.println("O segundo maior número é: " + num),
-                () -> System.out.println("A lista não contém um segundo maior número.")
+                num -> System.out.println("The second greater number of the list is " + num),
+                () -> System.out.println("The list hasn't any second greater number.")
         );
     }
 }
